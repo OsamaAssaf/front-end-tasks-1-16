@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F1F5F8;
+}
+
+.container {
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 700px;
+}
+.container h1 {
+  color: #063251;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.container .lorem-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.container .lorem-form label {
+  letter-spacing: 4px;
+  color: #063251;
+  font-size: 1.3rem;
+}
+.container .lorem-form input {
+  width: 4rem;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+}
+.container .lorem-form input::placeholder {
+  font-size: 1.3rem;
+}
+.container .lorem-form button {
+  color: #063251;
+  background-color: #49A6E9;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+.container .lorem-form button:hover {
+  background-color: #A5D5F8;
+  color: #49A6E9;
+}
+.container .lorem-text p {
+  color: #617D98;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  .container .lorem-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=lorem-ipsum.css.map */

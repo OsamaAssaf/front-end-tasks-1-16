@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    width: 100%;
+    font-family: Tahoma, sans-serif;
+}
+
+.to-do-container {
+    margin: 2rem auto;
+    width: 320px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.add-new-task {
+    display: flex;
+}
+
+.add-new-task #input-task {
+    height: 48px;
+    background-color: #303E52;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.add-new-task input::placeholder {
+    color: lightgrey;
+}
+
+.add-new-task #add-btn {
+    width: 48px;
+    height: 48px;
+    background-color: #0EBFB0;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tasks-list {
+    list-style-type: none;
+}
+
+#tasks-list .task {
+    background-color: #fff;
+    height: 48px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tasks-list .task input[type=checkbox]:checked + p {
+    text-decoration: line-through;
+    color: lightgrey;
+}
+
+#tasks-list .task p {
+    display: inline;
+    font-size: 18px;
+    padding-left: 0.5rem;
+}
+
+#tasks-list .task .delete-btn {
+    background: none;
+    border: none;
+    color: grey;
+    outline: none;
+}
+
+#tasks-list .task .delete-btn i {
+    font-size: 20px;
+}
+
+#tasks-list .task .delete-btn:hover {
+    color: red;
+}
+
+#error {
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    display: none;
+}

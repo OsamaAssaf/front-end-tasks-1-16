@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F1F5F8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home nav .nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#home nav .nav-header .nav-toggle {
+  background: none;
+  border: none;
+  color: #49A6E9;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: block;
+}
+#home nav .nav-header .nav-toggle:hover {
+  color: #063251;
+  transform: rotate(90deg);
+}
+#home nav .links {
+  list-style-type: none;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#home nav .links li a {
+  text-decoration: none;
+  letter-spacing: 4px;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #324D67;
+  transition: 0.5s;
+}
+#home nav .links li a:hover {
+  color: #49A6E9;
+  background-color: #A5D5F8;
+  padding-left: 1.5rem;
+}
+#home nav .links.show {
+  height: 140px;
+}
+#home nav.stick {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#home .banner {
+  height: 100vh;
+  background-image: url("../images/hero-bcg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#home .banner .container {
+  width: 100%;
+  color: white;
+}
+#home .banner .container h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+#home .banner .container p {
+  line-height: 1.6em;
+  font-size: 1.5rem;
+}
+#home .banner .container a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+#home .banner .container a:hover {
+  color: #40CFD4;
+  background-color: white;
+}
+
+.section {
+  height: 100vh;
+  text-align: center;
+}
+.section .title {
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.section .title h2 {
+  color: #102A42;
+}
+.section .title h2 span {
+  color: #40CFD4;
+}
+
+#services {
+  background-color: darkgrey;
+}
+
+footer {
+  background-color: #102A42;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+@keyframes scale-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.top-link {
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #40CFD4;
+  color: white;
+  font-size: 24px;
+  border-radius: 1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation-name: scale-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.top-link.show {
+  display: flex;
+}
+
+@media only screen and (min-width: 800px) {
+  #home nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #home nav .nav-header .nav-toggle {
+    display: none;
+  }
+  #home nav .links {
+    list-style-type: none;
+    height: auto;
+  }
+  #home nav .links li {
+    display: inline-block;
+  }
+  #home nav .links li a {
+    color: white;
+  }
+  #home nav .links li a:hover {
+    color: white;
+    background: none;
+    padding: 0.5rem 1rem;
+  }
+  #home nav .social-icons {
+    display: block;
+  }
+  #home nav .social-icons li a {
+    color: #49A6E9;
+  }
+  #home nav.stick .links li a {
+    color: #102A42;
+  }
+  #home nav.stick .links li a:hover {
+    color: #40CFD4;
+    background: none;
+    padding: 0.5rem 1rem;
+  }
+  #home .banner .container {
+    width: 80%;
+    color: white;
+  }
+  #home .banner .container h1 {
+    font-size: 5rem;
+  }
+  #home .banner .container p {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=scroll.css.map */

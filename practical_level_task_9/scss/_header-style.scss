@@ -1,0 +1,41 @@
+@import "colors";
+@import "fonts";
+
+
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: $primaryColor;
+  height: 80px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
+
+  .menu-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    > span {
+      display: block;
+      width: 32px;
+      height: 2px;
+      background-color: $lightTextColor;
+      margin-bottom: 6px;
+    }
+  }
+  h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Edu NSW ACT Foundation',cursive;
+  }
+}

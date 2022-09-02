@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212131;
+    font-family: sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+    'welcome my-name'
+    'cool-text cool-text';
+    grid-template-rows: 50vh 50vh;
+
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    display: inline-block;
+}
+.welcome{
+    grid-area: welcome;
+}
+.my-name{
+    grid-area: my-name;
+}
+.cool{
+    grid-area: cool-text;
+}
+.container >div{
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+}
+.container >div >p{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: white;
+}
+
+.play-button{
+    padding: 8px 16px;
+    border: none;
+    background-color: #1a6b7f;
+    color: white;
+    cursor: pointer;
+}
+.welcome-text > span{
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.welcome span.animate{
+    transform: translateY(100px);
+    color: #1a6b7f;
+}
+
+.my-name-text > span{
+     display: inline-block;
+ }
+
+@keyframes my-name-animation {
+    from{
+        color: red;
+    }
+    to{
+        color: blue;
+        transform: translate(0);
+    }
+
+}
+
+.my-name span.animate{
+    transform: translate(-20px,-20px);
+    animation-name: my-name-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.cool-text > span{
+    display: inline-block;
+}
+
+@keyframes cool-animation {
+    60% {
+        transform: translate(20px, 20px) rotate(30deg) scale(.3);
+    }
+
+    100% {
+        transform: translate(0) rotate(0) scale(1);
+        opacity: 1;
+    }
+
+}
+
+.cool span.animate{
+    animation-name: cool-animation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+}
+
+
+

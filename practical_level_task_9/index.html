@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="scss/login.css">
+    <script src="https://kit.fontawesome.com/8c889e6980.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+
+    <header>
+        <h1>Website Title</h1>
+    </header>
+
+    <section id="login-section" class="sign-in-mode">
+        <div class="form-field sign-in-form">
+            <form>
+                <h2>Sign In</h2>
+                <label>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </label>
+                <label>
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </label>
+                <div class="buttons">
+                    <label>
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+                    <input type="submit" value="Sign In">
+                </div>
+            </form>
+
+            <button id="sign-up-instead">Sign Up Instead</button>
+        </div>
+        <div class="form-field sign-up-form">
+            <form>
+                <h2>Sign Up</h2>
+                <label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </label>
+                <label>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </label>
+                <label>
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </label>
+                <div class="buttons">
+                    <label>
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+                    <input type="submit" value="Sign Up">
+                </div>
+
+            </form>
+            <button id="sign-in-instead">Sign In Instead</button>
+        </div>
+
+        <div class="social-media">
+            <p>Or</p>
+            <a href="#" class="facebook">
+                <i class="fa fa-facebook"></i>
+                <span>Login With Facebook</span>
+            </a>
+            <a href="home.html" class="twitter">
+                <i class="fa fa-twitter"></i>
+                <span style="color: red; font-weight: bolder">Go To Home Page</span>
+            </a>
+            <a href="#" class="google">
+                <i class="fa fa-google"></i>
+                <span>Login With Google</span>
+            </a>
+        </div>
+
+    </section>
+
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/product_card_style.css">
+    <title>Product Card</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>Product Name</h2>
+        <a href="#">Buy Now</a>
+        <img src="image/shoes_1.png">
+        <div class="circle"></div>
+    </div>
+    <div class="card">
+        <h2>Product Name</h2>
+        <a href="#">Buy Now</a>
+        <img src="image/shoes_1.png">
+        <div class="circle"></div>
+    </div>
+    <div class="card">
+        <h2>Product Name</h2>
+        <a href="#">Buy Now</a>
+        <img src="image/shoes_1.png">
+        <div class="circle"></div>
+    </div>
+</div>
+
+<script src="js/other/vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+@import "global";
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.counter{
+  text-align: center;
+  h1{
+    font-size: 64px;
+    letter-spacing: 4px;
+    color: #102A42;
+  }
+  .value{
+    margin: 1rem 0;
+    font-size: 120px;
+    color: #222222;
+  }
+  .button-container{
+    button{
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      box-shadow: 0 2px 4px rgb(0,0,0,0.5);
+      border: 2px solid #222222;
+      border-radius: 4px;
+      margin: 0 0.5rem;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+    button:hover{
+      background-color: #222;
+      color: white;
+    }
+  }
+}

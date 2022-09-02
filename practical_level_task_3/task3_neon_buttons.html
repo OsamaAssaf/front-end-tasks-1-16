@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/8c889e6980.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/main_style.css">
+  <link rel="stylesheet" type="text/css" href="css/task3_neon_buttons_style.css">
+    <title>Neon buttons</title>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1 onclick="goToHomePage()">Website Name</h1>
+    <div class="search-box">
+      <input class="search-text" type="search" placeholder="Type to search">
+      <a class="search-btn"><i class="fa fa-search"></i></a>
+    </div>
+  </header>
+  <aside class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="slide_bar.html">Image slide bar</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="animated_text.html">Animated text</a></li>
+      <li><a href="more_animated_text.html">More animated text</a></li>
+      <li><a href="task3_login.html">Task3/Sign up & Sign in</a></li>
+      <li><a class="active" href="task3_neon_buttons.html">Task3/Neon buttons</a></li>
+    </ul>
+  </aside>
+  <main class="main">
+      <div class="grid-container">
+        <div>
+          <a href="#" class="btn-1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Neon Button
+          </a>
+        </div>
+        <div>
+          <div class="outer button">
+            <button>Hover Me</button>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div>
+          <div class="outer circle">
+            <button>Hover Me</button>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer class="footer">
+    <h5>Copyright &copy; Osama Assaf, 2022</h5>
+    <div>
+      <h5>Play music</h5>
+      <audio id="player" src="music/background_music.mp3"></audio>
+      <button onclick="document.getElementById('player').play()"><i class="fa fa-play"></i></button>
+      <button onclick="document.getElementById('player').pause()"><i class="fa fa-pause"></i></button>
+    </div>
+
+  </footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

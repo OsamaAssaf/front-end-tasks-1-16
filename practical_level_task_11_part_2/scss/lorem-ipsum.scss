@@ -1,0 +1,70 @@
+@import "global";
+
+.container{
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 700px;
+  h1{
+    color: #063251;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .lorem-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    label{
+      letter-spacing: 4px;
+      color: #063251;
+      font-size: 1.3rem;
+    }
+    input{
+      width: 4rem;
+      border: none;
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+      font-size: 1.3rem;
+      margin: 0 0.5rem;
+    }
+    input::placeholder{
+      font-size: 1.3rem;
+    }
+    button{
+      color: #063251;
+      background-color: #49A6E9;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: 0.4s;
+    }
+    button:hover{
+      background-color: #A5D5F8;
+      color: #49A6E9;
+    }
+  }
+  .lorem-text{
+    p{
+      color: #617D98;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .lorem-text{
+      p{
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,44 @@
+@import "global";
+
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center{
+  text-align: center;
+  div{
+    background-color: #222222;
+    padding: 1rem;
+    border-radius: 4px;
+    h2{
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+    }
+    span{
+      h2{
+        color: #F1F5F8;
+      }
+    }
+  }
+  button{
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #222;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: all 0.5s;
+
+  }
+  button:hover{
+    background-color: #222;
+    color: #fff;
+  }
+
+}

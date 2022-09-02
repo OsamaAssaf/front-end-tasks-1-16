@@ -1,0 +1,151 @@
+@import "global";
+@import "colors";
+@import "header-style";
+
+
+// Start Header //
+#header {
+  .opened {
+    position: relative;
+
+    > span {
+      display: block;
+      width: 32px;
+      height: 2px;
+      background-color: $lightTextColor;
+      margin-bottom: 6px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+    }
+
+    span:nth-child(1) {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      visibility: hidden;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  .menu-icon {
+    visibility: hidden;
+    pointer-events: none;
+
+    > span {
+      margin-bottom: 6px;
+      transition: transform 0.4s;
+
+    }
+  }
+}
+
+// End Header //
+
+// Start Navbar And Image Grid View  //
+.container {
+  #side-navbar {
+    background-color: $secondaryColor;
+    min-width: 300px;
+    max-width: 300px;
+    position: fixed;
+    top: 80px;
+    height: 100vh;
+    transform: translateX(0);
+    transition: transform 0.4s ease;
+    padding: 1rem;
+    z-index: 99;
+    color: $darkTextColor;
+
+    ul {
+      list-style-type: none;
+      margin-top: 1rem;
+      text-align: center;
+      li {
+        display: inline-block;
+
+        i {
+          margin: 0 0.5rem;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 24px;
+        }
+
+        i:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+
+
+  }
+
+  .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    width: unquote('calc(100% - 300px)');
+
+    .column {
+      flex-basis: 25%;
+
+      .image-item {
+        position: relative;
+        width: 100%;
+
+        a {
+          img {
+            width: 100%;
+          }
+        }
+
+        .image-shadow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: 10px 10px $whiteWith30Opacity inset, -10px -10px $whiteWith30Opacity inset;
+          pointer-events: none;
+        }
+
+      }
+    }
+  }
+}
+
+.container::after, .container::before {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+// End Navbar And Image Grid View  //
+
+@media only screen and (max-width: 800px) {
+  // Start Header //
+  #header {
+    .menu-icon {
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+  // End Header //
+
+  // Start Navbar And Image Grid View  //
+  .container {
+    #side-navbar {
+      left: -350px;
+      transform: translateX(0);
+    }
+
+    .img-container {
+      width: 100%;
+    }
+  }
+  // End Navbar And Image Grid View  //
+}

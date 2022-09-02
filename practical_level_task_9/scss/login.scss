@@ -1,0 +1,299 @@
+@import "global";
+@import "colors";
+
+body {
+  background-color: $backgroundColor;
+  font-family: Tahoma, sans-serif;
+  height: 100vh;
+  background-image: url("../img/login_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+#login-section {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: height 0.3s;
+  display: grid;
+  grid-auto-columns: 1fr;
+  min-width: 380px;
+}
+
+.form-field {
+  text-align: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: all 0.3s;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  form > label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+
+  }
+
+  i {
+    color: rgba(128, 128, 128);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+  }
+
+  input {
+    padding-left: 0.5rem;
+    outline: none;
+    border: none;
+    color: rgba(128, 128, 128);
+    flex-basis: 100%;
+  }
+
+  input::placeholder {
+    color: rgba(128, 128, 128, 0.5);
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    input[type=submit] {
+      flex-basis: 40%;
+      cursor: pointer;
+      background-color: dodgerblue;
+      color: #fff;
+      text-transform: uppercase;
+      height: 40px;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    input[type=submit]:hover {
+      background-color: blue;
+      transform: scale(0.98);
+    }
+
+    label {
+      flex-basis: 60%;
+      cursor: pointer;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: dodgerblue;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  button:hover {
+    color: blue;
+  }
+
+  button::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    border-bottom: solid 1px grey;
+    top: 50%;
+    left: -3.5rem;
+  }
+
+  button::after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    border-bottom: solid 1px grey;
+    top: 50%;
+    right: -3.5rem;
+  }
+
+}
+
+.sign-in-mode {
+  height: 416px;
+
+  .sign-in-form {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .sign-up-form {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.sign-up-mode {
+  height: 466px;
+
+  .sign-in-form {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sign-up-form {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.social-media {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  min-width: 300px;
+  transform: translateX(-50%);
+
+  p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  p::before {
+    position: absolute;
+    content: '';
+    width: 2rem;
+    border-bottom: solid 1px grey;
+    top: 50%;
+    left: 6rem;
+  }
+
+  p::after {
+    position: absolute;
+    content: '';
+    width: 2rem;
+    border-bottom: solid 1px grey;
+    top: 50%;
+    right: 6rem;
+  }
+
+  a {
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: flex;
+
+    span {
+      padding: 0.5rem;
+      flex-basis: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 0 0.5rem 0.5rem 0;
+      transition: background-color 0.4s;
+    }
+
+    i {
+      flex-basis: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border-radius: 0.5rem 0 0 0.5rem;
+      transition: background-color 0.4s;
+    }
+  }
+
+  .facebook {
+    i {
+      background-color: #233A67;
+    }
+
+    span {
+      background-color: #4267B2;
+    }
+
+  }
+
+  .facebook:hover {
+    i {
+      background-color: #1e3156;
+    }
+
+    span {
+      background-color: #38599b;
+    }
+
+  }
+
+  .twitter {
+    i {
+      background-color: #0996CC;
+    }
+
+    span {
+      background-color: #1DA1F2;
+    }
+  }
+
+  .twitter:hover {
+    i {
+      background-color: #097ca8;
+    }
+
+    span {
+      background-color: #1c8bd0;
+    }
+  }
+
+  .google {
+    i {
+      background-color: #C63125;
+    }
+
+    span {
+      background-color: #DB4437;
+    }
+  }
+
+  .google:hover {
+    i {
+      background-color: #992920;
+    }
+
+    span {
+      background-color: #b73a2f;
+    }
+  }
+
+
+}
+
+@media only screen and (max-width: 380px) {
+  #login-section {
+    min-width: 100%;
+  }
+}
+
+

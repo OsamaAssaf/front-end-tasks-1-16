@@ -1,0 +1,101 @@
+
+
+.main .container{
+    background-color: #f4f4f4;
+    width: 50%;
+    margin: auto;
+    box-shadow: 2px 2px 8px grey;
+    padding: 1rem;
+    transition: width 0.4s;
+}
+
+.main .row{
+    margin: 0 auto 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row > span{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #929292;
+}
+.row > span:hover{
+    color: #43AA39;
+}
+.row span.active{
+    color: #43AA39;
+}
+
+.main .items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    border: 1px solid lightgrey;
+    padding: 1rem;
+    grid-gap: 2rem;
+
+}
+.item.list{
+    flex-basis: 100%;
+    flex-direction: row;
+    margin: 0 0 1rem 0;
+}
+.item.grid{
+    flex-basis: calc(33.33% - 1rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0.5rem 1rem 0.5rem;
+}
+.item img{
+    width: 75px;
+}
+.item h3,.item p{
+    color: #929292;
+}
+
+.item button{
+    background-color: #43AA39;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .main .container{
+        width: 100%;
+    }
+    .item.grid{
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .main .container{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main .container{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .main .container{
+        width: 75%;
+    }
+}
+

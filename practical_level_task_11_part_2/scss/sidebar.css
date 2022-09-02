@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F1F5F8;
+}
+
+@keyframes sidebar-toggle-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1;
+  animation-name: sidebar-toggle-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background: none;
+  border: none;
+  color: #49A6E9;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.sidebar-toggle:hover {
+  color: #8BCBF9;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  background-color: white;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 2;
+}
+.sidebar .header {
+  padding: 1rem;
+}
+.sidebar .sidebar-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #BB2525;
+  border: none;
+  background: none;
+}
+.sidebar .sidebar-close:hover {
+  transform: rotate(360deg);
+}
+.sidebar .links {
+  list-style-type: none;
+}
+.sidebar .links li a {
+  display: block;
+  padding: 1rem;
+  transition: 0.5s;
+  color: #617D98;
+  text-decoration: none;
+  font-size: 24px;
+}
+.sidebar .links li a:hover {
+  background-color: #A5D5F8;
+  padding-left: 1.5rem;
+  color: #49A6E9;
+}
+.sidebar .social-icons {
+  list-style-type: none;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sidebar .social-icons li {
+  display: inline-block;
+}
+.sidebar .social-icons li a {
+  color: #49A6E9;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+@media only screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+    left: -400px;
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,128 @@
+
+
+.row{
+    background-color: rgba(243, 120, 120,0.7);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 20px;
+}
+.row i{
+    color: white;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+.row i:hover{
+    color: #FFC54D;
+}
+.image-grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0.5rem ;
+}
+.column{
+    flex-basis: 25%;
+    padding-right: 0.5rem;
+}
+.column img{
+    width: 100%;
+}
+
+.social-share-button{
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 99;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    height: 60px;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition:height 0.4s;
+}
+.social-share-button.active {
+    height: 240px;
+}
+
+.social-share-button .title{
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+.social-share-button .title h2{
+    color: #D84A5F;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+
+}
+
+.plus-icon{
+    background-color: #D84A5F;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s;
+}
+.social-share-button.active .plus-icon{
+    transform: rotate(45deg);
+}
+
+.social-media span{
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media a{
+    margin: 1rem 0;
+    text-decoration: none;
+}
+.social-media a:hover{
+    background-color: lightgrey;
+    border-radius: 1rem;
+}
+.facebook,.twitter,.instagram,.reddit{
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+
+}
+.social-media p{
+    letter-spacing: 4px;
+}
+.facebook p{
+    color: #183153;
+
+}
+.facebook span{
+    background-color: #183153;
+}
+.twitter p{
+    color: #1DA1F2;
+}
+.twitter span{
+    background-color: #1DA1F2;
+}
+.instagram p{
+    color: #C13584;
+}
+.instagram span{
+    background-color: #C13584;
+}
+.reddit p{
+    color: #FF4500;
+}
+.reddit span{
+    background-color: #FF4500;
+}
+
+
+

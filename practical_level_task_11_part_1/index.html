@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11</title>
+
+    <script src="https://kit.fontawesome.com/8c889e6980.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/to-do-list.css">
+    <link rel="stylesheet" type="text/css" href="css/form-validation.css">
+</head>
+<body>
+
+<!-- To Do List -->
+<div class="to-do-container">
+    <div id="error">
+        <h3>You must enter some text</h3>
+    </div>
+    <div class="add-new-task">
+        <label>
+            <input type="text" placeholder="Enter a task" id="input-task">
+        </label>
+        <div id="add-btn"><i class="fa fa-plus" style="font-size:24px"></i></div>
+    </div>
+    <ul id="tasks-list"></ul>
+</div>
+<!-- To Do List -->
+<hr>
+
+<!-- Client-side Form Validation -->
+<div class="form-container">
+    <div class="header">
+        <h2>Create Account</h2>
+    </div>
+    <form id="form" class="form">
+        <div class="form-control">
+            <label for="username">Username</label>
+            <input type="text" placeholder="osama_322" id="username" name="username"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" placeholder="name@gmail.com" id="email" name="email"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="username">Password check</label>
+            <input type="password" placeholder="Password two" id="password2"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
+<!-- Client-side Form Validation -->
+
+
+
+<script src="js/to-do-list.js"></script>
+<script src="js/form-validation.js"></script>
+</body>
+</html>

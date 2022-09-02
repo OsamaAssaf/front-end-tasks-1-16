@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F1F5F8;
+}
+
+header {
+  background-image: url("../images/hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+header .center {
+  height: 40vh;
+  width: 90vw;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+header .center h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+}
+header .center .open-btn {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 2px solid #49A6E9;
+  border-radius: 0.5rem;
+  background-color: #49A6E9;
+  color: white;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+header .center .open-btn:hover {
+  background-color: transparent;
+  color: #49A6E9;
+}
+
+.model-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+}
+.model-overlay .model-container {
+  height: 30vh;
+  width: 90vw;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  text-transform: capitalize;
+  transition: width 0.5s;
+}
+.model-overlay .model-container .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #BB2525;
+  cursor: pointer;
+  transition: color 0.5s, transform 0.5s;
+}
+.model-overlay .model-container .close-btn:hover {
+  color: #E66B6B;
+  transform: scale(1.5);
+}
+
+.model-overlay.show {
+  visibility: visible;
+}
+
+@media only screen and (min-width: 800px) {
+  header .center {
+    width: 600px;
+  }
+  .model-overlay .model-container {
+    width: 600px;
+  }
+}
+
+/*# sourceMappingURL=modal.css.map */

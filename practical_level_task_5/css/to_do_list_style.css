@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Tahoma, sans-serif;
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{
+    background-color: #fff;
+}
+
+.title{
+    padding: 0.5rem 1rem;
+    background-color: #04A8F4;
+    color: white;
+}
+
+.list ul{
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.list li{
+    position: relative;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.list li:last-child{
+    border-bottom: none;
+}
+.list li input[type=checkbox]{
+    position: absolute;
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: all;
+}
+.list li span{
+    position: absolute;
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.list li span div{
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-45deg);
+}
+
+.list li input[type=checkbox]:checked ~ span{
+    background-color: #04A8F4;
+}
+.list li input[type=checkbox]:checked ~ span > div{
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+.list li input[type=checkbox]:checked ~ label{
+    color: #ccc;
+    text-decoration: line-through;
+}
+

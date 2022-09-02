@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F1F5F8;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  text-align: center;
+}
+.counter h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+  color: #102A42;
+}
+.counter .value {
+  margin: 1rem 0;
+  font-size: 120px;
+  color: #222222;
+}
+.counter .button-container button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #222222;
+  border-radius: 4px;
+  margin: 0 0.5rem;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.counter .button-container button:hover {
+  background-color: #222;
+  color: white;
+}
+
+/*# sourceMappingURL=counter.css.map */

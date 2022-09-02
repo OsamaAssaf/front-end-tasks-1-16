@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+}
+
+@font-face {
+  font-family: "Edu NSW ACT Foundation";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/edunswactfoundation/v1/raxRHjqJtsNBFUi8WO0vUBgc9D-2lV_oQdCAYlt_QTQ0vUxJki9tosGMci4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #D65900;
+  height: 80px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
+}
+#header .menu-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+#header .menu-icon > span {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: #EDFFEC;
+  margin-bottom: 6px;
+}
+#header h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+#header .opened {
+  position: relative;
+}
+#header .opened > span {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: #EDFFEC;
+  margin-bottom: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(0);
+}
+#header .opened span:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+}
+#header .opened span:nth-child(2) {
+  visibility: hidden;
+}
+#header .opened span:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+#header .menu-icon {
+  visibility: hidden;
+  pointer-events: none;
+}
+#header .menu-icon > span {
+  margin-bottom: 6px;
+  transition: transform 0.4s;
+}
+
+.container #side-navbar {
+  background-color: #FBBA72;
+  min-width: 300px;
+  max-width: 300px;
+  position: fixed;
+  top: 80px;
+  height: 100vh;
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+  padding: 1rem;
+  z-index: 99;
+  color: #8F250C;
+}
+.container #side-navbar ul {
+  list-style-type: none;
+  margin-top: 1rem;
+  text-align: center;
+}
+.container #side-navbar ul li {
+  display: inline-block;
+}
+.container #side-navbar ul li i {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+.container #side-navbar ul li i:hover {
+  color: #D65900;
+}
+.container .img-container {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  width: calc(100% - 300px);
+}
+.container .img-container .column {
+  flex-basis: 25%;
+}
+.container .img-container .column .image-item {
+  position: relative;
+  width: 100%;
+}
+.container .img-container .column .image-item a img {
+  width: 100%;
+}
+.container .img-container .column .image-item .image-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.3) inset, -10px -10px rgba(255, 255, 255, 0.3) inset;
+  pointer-events: none;
+}
+
+.container::after, .container::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media only screen and (max-width: 800px) {
+  #header .menu-icon {
+    visibility: visible;
+    pointer-events: all;
+  }
+  .container #side-navbar {
+    left: -350px;
+    transform: translateX(0);
+  }
+  .container .img-container {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=image_gallery.css.map */

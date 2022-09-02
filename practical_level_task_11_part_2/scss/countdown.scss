@@ -1,0 +1,73 @@
+@import "global";
+
+
+
+.gift-container{
+  width: 90%;
+  margin: 6rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  img{
+    width: 100%;
+  }
+  .text-container{
+    width: 100%;
+    h1{
+      color: #1A6AA2;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 4px;
+    }
+    h4{
+      color: #102A42;
+      text-transform: capitalize;
+      letter-spacing: 4px;
+    }
+    p{
+      color: #829AB0;
+      margin: 2rem 0;
+    }
+    .timer-container{
+      display: flex;
+      gap: 1rem;
+      .timer-box{
+        width: 5rem;
+        height: 5rem;
+        background-color: #102A42;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h3{
+          letter-spacing: 4px;
+          font-size: 2rem;
+          font-weight: 500;
+        }
+        p{
+          text-transform: uppercase;
+          margin: 0;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+  .gift-container{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    img{
+      width: 50%;
+    }
+    .text-container{
+      width: 50%;
+    }
+  }
+}

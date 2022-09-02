@@ -1,0 +1,9 @@
+
+
+body{
+    background-color: #212131;
+}
+
+.container{
+    display: flex;
+}

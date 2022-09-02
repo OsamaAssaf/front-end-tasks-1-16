@@ -1,0 +1,249 @@
+@import "global";
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+#home{
+  nav {
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+
+      .nav-toggle {
+        background: none;
+        border: none;
+        color: #49A6E9;
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.5s;
+        display: block;
+      }
+
+      .nav-toggle:hover {
+        color: #063251;
+        transform: rotate(90deg);
+      }
+    }
+    .links {
+      list-style-type: none;
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+
+      li {
+        a {
+          text-decoration: none;
+          letter-spacing: 4px;
+          display: block;
+          padding: 0.5rem 1rem;
+          color: #324D67;
+          transition: 0.5s;
+        }
+
+        a:hover {
+          color: #49A6E9;
+          background-color: #A5D5F8;
+          padding-left: 1.5rem;
+        }
+      }
+    }
+
+    .links.show {
+      height: 140px;
+    }
+
+
+  }
+  nav.stick{
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .banner{
+    height: 100vh;
+    background-image: url("../images/hero-bcg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .container{
+      width: 100%;
+      color: white;
+      h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+      p{
+        line-height: 1.6em;
+        font-size: 1.5rem;
+      }
+      a{
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid white;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      a:hover{
+        color: #40CFD4;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.section{
+  height: 100vh;
+  text-align: center;
+  .title{
+    text-transform: uppercase;
+    font-size: 32px;
+    h2{
+      color: #102A42;
+      span{
+        color: #40CFD4;
+      }
+    }
+  }
+}
+
+#services{
+  background-color: darkgrey;
+}
+
+footer{
+  background-color: #102A42;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+@keyframes scale-animation {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.3);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.top-link{
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #40CFD4;
+  color: white;
+  font-size: 24px;
+  border-radius: 1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation-name: scale-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.top-link.show{
+  display: flex;
+}
+
+@media only screen and (min-width: 800px) {
+  #home{
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      height: 60px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-header {
+        .nav-toggle {
+          display: none;
+        }
+      }
+
+      .links {
+        list-style-type: none;
+        height: auto;
+
+        li {
+          display: inline-block;
+          a {
+            color: white;
+
+          }
+          a:hover {
+            color: white;
+            background: none;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+
+      .social-icons {
+        display: block;
+
+        li {
+          a {
+            color: #49A6E9;
+          }
+        }
+      }
+    }
+    nav.stick{
+      .links {
+
+        li {
+          a {
+            color: #102A42;
+          }
+          a:hover {
+            color: #40CFD4;
+            background: none;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+    .banner{
+      .container{
+        width: 80%;
+        color: white;
+        h1{
+          font-size: 5rem;
+        }
+        p{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

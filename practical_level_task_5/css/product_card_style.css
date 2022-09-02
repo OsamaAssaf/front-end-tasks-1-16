@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Tahoma, sans-serif;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background-color: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.card::before{
+    content: 'NIKE';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card::after{
+    content: 'SHOES';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover::before{
+    opacity: 0.04;
+}
+.card:hover::after{
+    opacity: 0.04;
+}
+
+.card h2{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    z-index: 10;
+    transform: translate3d(0,0,75px);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    opacity: 0;
+}
+.card:hover.card h2{
+    opacity: 1;
+    transform:  translate3d(0,40px,75px);
+}
+
+.card a{
+    position: absolute;
+    text-decoration: none;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #fff;
+    background-color: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+.card:hover.card a{
+    opacity: 1;
+    transform: translate3d(-50%,-30px,75px);
+}
+
+.card .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background-color: #fff;
+    z-index: 10;
+}
+.card:hover.card .circle{
+    transform: translate3d(-50%,-50%,50px);
+}
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0) rotate(15deg);
+    transform-style: preserve-3d;
+    max-width: 300px;
+    z-index: 11;
+    transition: 0.5s;
+}
+.card:hover.card img{
+    transform: translate3d(-50%,-50%,100px) rotate(15deg);
+}
+
+.card:nth-of-type(1) .circle,
+.card:nth-of-type(1).card a{
+    background-color: #379bf7;
+}
+.card:nth-of-type(2) .circle,
+.card:nth-of-type(2).card a{
+    background-color: #9bdc28;
+}
+.card:nth-of-type(3) .circle,
+.card:nth-of-type(3).card a{
+    background-color: #fb4b4f;
+}

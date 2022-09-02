@@ -1,0 +1,79 @@
+@import "global";
+
+
+body{
+  margin: 3rem 10%;
+}
+
+.slider-container{
+  border: 5px solid #49A6E9;
+  border-radius: 0.5rem;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  .slide{
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #C5E5FC;
+    transition: 0.5s;
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    h1{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: white;
+      font-size: 4rem;
+    }
+  }
+  .slide:last-child{
+    display: grid;
+    place-items: center;
+    img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    h4{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: white;
+    }
+    h1{
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+  }
+}
+
+.btn-container{
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  button{
+    color: #617D98;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+}

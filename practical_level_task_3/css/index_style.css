@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.container{
+    background-color: #041C32;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes welcome-animation {
+    from{
+        font-size: 16px;
+    }
+    to{
+        font-size: 72px;
+    }
+}
+
+.container h1{
+    background: -webkit-linear-gradient(white, rgba(236, 179, 101,0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: welcome-animation;
+    animation-duration: 3s;
+}
